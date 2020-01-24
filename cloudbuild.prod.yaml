@@ -7,7 +7,7 @@ steps:
   
   - id: 'Create image'
     name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/$PROJECT_ID/webserver-go:$SHORT_SHA', '-f, '.']  
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/webserver-go:$SHORT_SHA', '-f', '.']  
   
   - id: 'Pushing image'
     name: 'gcr.io/cloud-builders/docker'
