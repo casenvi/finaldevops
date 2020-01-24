@@ -7,11 +7,11 @@ steps:
   
   - id: 'Create image'
     name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/$PROJECT_ID/webserver-go:$SHORT_SHA', '-F', '.']  
+    args: ['build', '-t', 'gcr.io/$PROJECT_ID/webserver-go:$SHORT_SHA', '-f, '.']  
   
-  # - id: 'Pushing image'
-  #   name: 'gcr.io/cloud-builders/docker'
-  #   args: ['push','gcr.io/$PROJECT_ID/webserver-go:$SHORT_SHA']  
+  - id: 'Pushing image'
+    name: 'gcr.io/cloud-builders/docker'
+    args: ['push','gcr.io/$PROJECT_ID/webserver-go:$SHORT_SHA']  
 
   # - id: 'Adjusting deployment file'
   #   name: 'gcr.io/cloud-builders/gcloud'
