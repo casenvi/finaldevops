@@ -22,12 +22,12 @@ steps:
         sed 's#img-webserver_golang#gcr.io/$PROJECT_ID/webserver-go:$SHORT_SHA#g' .deployment.yaml > deployment-new.yaml
         cat deployment-new.yaml;
   
-  # - id: 'Deploying k8s'
-  #   name: 'gcr.io/cloud-builders/kubectl'
-  #   args:
-  #     - 'apply'
-  #     - '-f'
-  #     - 'deployment-new.yaml'
-  #   env:
-  #     -'CLOUDDK_COMPUTE_ZONE=us-central1-a'
+  - id: 'Deploying k8s'
+    name: 'gcr.io/cloud-builders/kubectl'
+    args:
+      - 'apply'
+      - '-f'
+      - 'deployment-new.yaml'
+    env:
+      -'CLOUDDK_COMPUTE_ZONE=us-central1-a'
   
