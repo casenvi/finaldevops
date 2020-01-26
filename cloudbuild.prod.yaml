@@ -29,5 +29,4 @@ steps:
       - '-f'
       - 'deployment-new.yaml'
     env:
-      -'CLOUDDK_COMPUTE_ZONE=us-central1-a'
-  
+    -'CLOUDDK_COMPUTE_ZONE=us-central1-a'
