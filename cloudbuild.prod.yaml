@@ -19,7 +19,7 @@ steps:
     args:
       - '-c'
       - |
-        sed 's#img-webserver_golang#gcr.io/$PROJECT_ID/webserver-go:$SHORT_SHA#g' .deployment.yaml > deployment-new.yaml
+        sed 's#img-webserver_golang#gcr.io/$PROJECT_ID/webserver-go:$SHORT_SHA#g' deployment.yaml > deployment-new.yaml
         cat deployment-new.yaml;
   
   - id: 'Deploying k8s'
@@ -29,4 +29,5 @@ steps:
       - '-f'
       - 'deployment-new.yaml'
     env:
-    -'CLOUDDK_COMPUTE_ZONE=us-central1-a'
+    - 'CLOUDDK_COMPUTE_ZONE=us-central1-a'
+    - 'CLOUDDK_CONTAINER_CLUSTER=cluster-docker-final'
