@@ -17,7 +17,7 @@ steps:
     name: 'gcr.io/cloud-builders/gcloud'
     entrypoint: '/bin/sh'
     args:
-      - 'c'
+      - '-c'
       - |
         sed 's#img-webserver_golang#gcr.io/$PROJECT_ID/webserver-go:$SHORT_SHA#g' .deployment.yaml > deployment-new.yaml
         cat deployment-new.yaml;
