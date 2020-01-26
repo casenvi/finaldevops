@@ -15,5 +15,7 @@ As regras do processo são:
 Faça o upload de todo código em um repositório, incluindo os do Cloudbuild, para que possamos fazer a avaliação.
 
 ## Entrega
-Pode-se verificar o funcionamento deste exercicio acessando o endereço XXXX. Nele será exibido a frase *Deploy Contínuo* em negrito. 
-Os arquivos utilizando encontram-se neste repositório. 
+Pode-se verificar o funcionamento deste exercicio acessando o endereço http://34.68.21.163/. Nele será exibido a frase *Deploy Contínuo!* em negrito. 
+Os arquivos utilizando encontram-se neste repositório, sendo:
+* Diretório k8s - arquivos de deployment
+* Diretório src - Código fonte e arquivo de teste da aplicação go. 

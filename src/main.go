@@ -6,7 +6,7 @@ import (
 )
 
 func main(){
-	greeting("Deploy Contínuo")
+	greeting("Deploy Contínuo!")
 
 	fmt.Println(http.ListenAndServe(":8000", nil))
 }

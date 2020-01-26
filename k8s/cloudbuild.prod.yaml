@@ -19,15 +19,15 @@ steps:
     args:
       - '-c'
       - |
-        sed 's#img-webserver_golang#gcr.io/$PROJECT_ID/webserver-go:$SHORT_SHA#g' deployment.yaml > deployment-new.yaml
-        cat deployment-new.yaml;
+        sed 's#img-webserver_golang#gcr.io/$PROJECT_ID/webserver-go:$SHORT_SHA#g' ./k8s/deployment.yaml > ./k8s/deployment-new.yaml
+        cat ./k8s/deployment-new.yaml;
   
   - id: 'Deploying k8s'
     name: 'gcr.io/cloud-builders/kubectl'
     args:
       - 'apply'
       - '-f'
-      - 'deployment-new.yaml'
+      - './k8s/deployment-new.yaml'
     env:
     - 'CLOUDSDK_COMPUTE_ZONE=us-central1-a'
     - 'CLOUDSDK_CONTAINER_CLUSTER=cluster-docker-final'
